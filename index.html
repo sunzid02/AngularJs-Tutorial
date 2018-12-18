@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" ng-app = "myModule">
+  <head>
+    <meta charset="utf-8">
+    <title>Angular</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
+    <script type="text/javascript" src="Scripts/Script.js"></script>
+  </head>
+  <body>
+    <h1>{{ 8+9 }}</h1>
+    <div  ng-controller = "myController">
+      <input type="text" name="" value="" ng-model="employee.firstName">
+      {{ employee.firstName }}
+    </div>
+
+    <div ng-controller = "myController">
+      <div>
+        Country: {{ country.name }}
+      </div>
+      <div>
+        Capital: {{ country.capital }}
+      </div>
+      <div>
+        <img ng-src="{{ country.flag }}"
+          alt="Bangladesh-flag">
+      </div>
+
+      <div class="">
+      </div>
+    </div>
+    <h1>.....................................................................................................</h1>
+    <div class="" ng-controller="myController2">
+      <table border="1">
+        <thead>
+          <tr>
+            <th>First name</th>
+            <th>Last name</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat = "menz in menz" ng-init="parentIndex = $index">
+            <td>{{ menz.firstName }} {{ parentIndex }}</td>
+            <td>{{ menz.lastName }}  {{ parentIndex }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
