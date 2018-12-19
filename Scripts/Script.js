@@ -71,4 +71,16 @@ var myApp = angular
 
                 $scope.employees = employees;
                 $scope.rowLimit = 3;
+              })
+              .controller("SortingDataController", function($scope){
+                var employees = [
+                  { name:"Abdul", dateOfBirth:new Date("January 23, 1980"), gender:"Male", salary: 50879.88 },
+                  { name:"Babul", dateOfBirth:new Date("November 23, 1990"), gender:"Male", salary: 40879.88 },
+                  { name:"Chulbul", dateOfBirth:new Date("February 23, 1950"), gender:"Male", salary: 30879.88 },
+                  { name:"Pandey", dateOfBirth:new Date("November 23, 1940"), gender:"Male", salary: 5079.88 },
+                  { name:"Maya", dateOfBirth:new Date("November 23, 1930"), gender:"Female", salary: 5179.88 },
+                ];
+
+                $scope.employees = employees;
+                $scope.sortColumn = "name";
               });
