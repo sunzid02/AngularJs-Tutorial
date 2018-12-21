@@ -1,2 +1,2 @@
 # AngularJs-Tutorial
-Basics of angular<br>
+Basics of Angular JS<br>
