@@ -132,7 +132,7 @@ var myApp = angular
               })
 
               .controller("SearchController", function ($scope) {
-                var employees = [
+                var employeess = [
                     { name: "Ben", dateOfBirth: new Date("November 23, 1980"), gender: "Male", salary: 55000 },
                     { name: "Sara", dateOfBirth: new Date("May 05, 1970"), gender: "Female", salary: 68000 },
                     { name: "Mark", dateOfBirth: new Date("August 15, 1974"), gender: "Male", salary: 57000 },
@@ -140,5 +140,5 @@ var myApp = angular
                     { name: "Todd", dateOfBirth: new Date("December 30, 1983"), gender: "Male", salary: 60000 }
                 ];
 
-                $scope.employees = employees;
+                $scope.employees = employeess;
               });
