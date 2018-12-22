@@ -25,7 +25,7 @@
                Salary (Number) <div class="" ng-class = "getSortClass('salary')"></div>
              </th>
           </tr>
-        </thead>
+        </thead>  
         <tbody>
           <tr ng-repeat = "employee in employees | orderBy: sortColumn: reverseSort">
             <td> {{ employee.name }} </td>
@@ -35,7 +35,9 @@
           </tr>
         </tbody>
       </table>
-      a
     </div>
+
+
+    
   </body>
 </html>
