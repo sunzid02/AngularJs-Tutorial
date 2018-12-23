@@ -1,5 +1,3 @@
-
-
 // //create module
 // var myApp = angular.module("myModule", []);
 //
@@ -141,4 +139,40 @@ var myApp = angular
                 ];
 
                 $scope.employees = employeess;
+                
+              })
+              
+              .controller("FilterByMultiplePropertiesController", function ($scope) {
+                var employees = [
+                  { name: "Ben", gender: "Male", salary: 50000, city: "Dhaka"},
+                  { name: "Has", gender: "Female", salary: 150000, city: "Raj"},
+                  { name: "Kum", gender: "Male", salary: 2550000, city: "Com"},
+                  { name: "Pro", gender: "Female", salary: 8950000, city: "Bari"},
+                  { name: "Pur", gender: "Male", salary: 350000, city: "Syl"},
+                ];
+
+                $scope.employees = employees;
+
+                $scope.search = function (item) {
+                  //if we dont type anything in the search box
+                  if ($scope.searchTextOpt2 == undefined) 
+                  {
+                    return true;
+                  }
+                  else
+                  {
+                    if (
+                        item.name.toLowerCase().indexOf($scope.searchTextOpt2.toLowerCase()) != -1 
+                        ||
+                        item.city.toLowerCase().indexOf($scope.searchTextOpt2.toLowerCase()) != -1
+                      ) 
+                    {
+                      return true;
+                    }
+                  }
+
+                  return false; // no match found
+                }
               });
+
+          
