@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" ng-app="myModule">
+<head>
+    <meta charset="utf-8">
+    <title>Create Custom filter</title>
+    
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
+    <script type="text/javascript" src="Scripts/Script.js"></script>
+    <script type="text/javascript" src="Scripts/filter.js"></script>
+    
+    <link rel="stylesheet" href="Styles/tableStyle.css">
+</head>
+
+<body>
+    <h1 style="text-align:center">Using gender filter, if gender 1, then gender is Male</h1><br><br>
+    <div class="" ng-controller="customFilterController">
+        <br><br>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>Salary</th>
+                    <th>City</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="employee in employees">
+                    <td> {{ employee.name }} </td>
+                    <td> {{ employee.gender  }} </td>
+                    <td> {{ employee.salary }} </td>
+                    <td> {{ employee.city }} </td>
+                </tr>
+            </tbody>
+        </table>
+        <br><br>
+        <h1>After using custom "gender" filter</h1>
+                <br>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Gender</th>
+                            <th>Salary</th>
+                            <th>City</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="employee in employees">
+                            <td> {{ employee.name }} </td>
+                            <td> {{ employee.gender | gender }} </td>
+                            <td> {{ employee.salary }} </td>
+                            <td> {{ employee.city }} </td>
+                        </tr>
+                    </tbody>
+                </table>
+    </div>
+</body>
+</html>
