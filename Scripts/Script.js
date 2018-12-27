@@ -184,6 +184,16 @@ var myApp = angular
                 ];
                 $scope.employees = employees;
 
+              })
+              .controller("ngHideShowController", function ($scope) {
+                var employees = [
+                  { name: "Ben", gender: 1, salary: 50000, city: "Dhaka" },
+                  { name: "Has", gender: 2, salary: 150000, city: "Raj" },
+                  { name: "Kum", gender: 3, salary: 2550000, city: "Com" },
+                  { name: "Pro", gender: 1, salary: 8950000, city: "Bari" },
+                  { name: "Pur", gender: 2, salary: 350000, city: "Syl" },
+                ];
+                $scope.employees = employees;
               });
 
           

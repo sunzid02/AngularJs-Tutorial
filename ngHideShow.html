@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" ng-app = "myModule">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ng hide show</title>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
+    <script type="text/javascript" src="Scripts/Script.js"></script>
+    <link rel="stylesheet" href="Styles/tableStyle.css">
+</head>
+<body>
+    <div ng-controller = "ngHideShowController">
+        <h1>show hide</h1>
+        <input type="checkbox" name="" id="" ng-model = "hideCity"> hide city 
+        <br><br>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>Salary</th>
+                    <th ng-hide = "hideCity">City</th> <!-- initially this will be false-->
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="employee in employees">
+                    <td> {{ employee.name }} </td>
+                    <td> {{ employee.gender }} </td>
+                    <td> {{ employee.salary }} </td>
+                    <td ng-hide = "hideCity"> {{ employee.city }} </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h1>Masking</h1>
+            <input type="checkbox" name="" id="" ng-model="muskCity"> musk city
+            <br><br>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Gender</th>
+                        <th>Salary</th>
+                        <th ng-hide="muskCity">City</th> <!-- initially this will be false-->
+                        <th ng-show="muskCity">City</th> <!-- initially this will be false-->
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="employee in employees">
+                        <td> {{ employee.name }} </td>
+                        <td> {{ employee.gender }} </td>
+                        <td> {{ employee.salary }} </td>
+                        <td ng-hide="muskCity"> {{ employee.city }} </td>
+                        <td ng-show="muskCity"> #### </td>
+                    </tr>
+                </tbody>
+            </table>
+    </div>
+</body>
+</html>
